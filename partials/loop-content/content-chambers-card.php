@@ -12,6 +12,10 @@
 
 	<p><?php the_field( 'detailed_description' ); ?></p>
 
+	<a href="/contact">
+		<button>Enquire now<span class="dashicons dashicons-admin-users"></span></button>
+	</a>
+
 </section>
 
 

@@ -695,6 +695,7 @@ p.less-padding {
     border: none;
     color: white;
     line-height: 20px;
+    font-size: 12px;
 }
 .chambers-list button:hover {
     background-color: rgba(178, 179, 170, .2);

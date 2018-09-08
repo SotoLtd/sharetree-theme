@@ -18,10 +18,10 @@ Template: industrial
 /* 20.1 MIN WIDTH 1025px                  */
 /* 20.2 MAX WIDTH 1024px                  */
 /* 20.3 BETWEEN 768px and 1023px          */
-/* 20.4 MAX WIDTH 767px                   */
-/* 20.5 MAX WIDTH 639px                   */
-/* 20.6 BETWEEN 451px and 520px           */
-/* 20.7 MAX WIDTH 450px                   */
+/* 20.5 MAX WIDTH 767px                   */
+/* 20.6 MAX WIDTH 639px                   */
+/* 20.7 BETWEEN 451px and 520px           */
+/* 20.8 MAX WIDTH 450px                   */
 
 
 
@@ -690,7 +690,7 @@ p.less-padding {
 
 .chambers-list button {
     padding: 4px 8px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     background-color: #0e4194;
     border: none;
     color: white;
@@ -706,7 +706,7 @@ p.less-padding {
 
 /* 15.1 CHAMBER RENTAL PAGE               */
 .page-id-6046 .entry-content {
-    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 
@@ -726,6 +726,15 @@ p.less-padding {
     }
     body #header .search_line {
         top: 93px;
+    }
+
+    .column-1 {
+        padding-right: 160px;
+    }
+
+    /* 10.1  CHAMBERS                    */
+    .column-1 {
+        padding-right: 160px;
     }
 }
 
@@ -893,9 +902,20 @@ p.less-padding {
         font-size: 16px;
         line-height: 22px;
     }
+
+    /* 10.1  CHAMBERS                    */
+    .data-section {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .column-1 {
+        padding-right: 80px;
+    }
 }
 
-/* 20.4 MAX WIDTH 767px            */
+
+/* 20.5 MAX WIDTH 767px            */
 @media only screen and (max-width: 767px) {  
     .phone_number_but {
         text-align: right;
@@ -923,7 +943,7 @@ p.less-padding {
 }
 
 
-/* 20.5 MAX WIDTH 639px            */
+/* 20.6 MAX WIDTH 639px            */
 @media only screen and (max-width: 639px){
     .st-form-wrap {
         display: block;
@@ -945,7 +965,7 @@ p.less-padding {
 }
 
 
-/* 20.6 BETWEEN 451px and 520px    */
+/* 20.7 BETWEEN 451px and 520px    */
 @media only screen and (min-width: 451px) and (max-width: 520px) {
     
     .st-image-boxes .st-image-box {
@@ -954,7 +974,7 @@ p.less-padding {
 }
 
 
-/* 20.7 MAX WIDTH 450px            */
+/* 20.8 MAX WIDTH 450px            */
 @media only screen and (max-width: 450px) {  
     body .logo {
         padding-bottom: 20px;
@@ -970,5 +990,19 @@ p.less-padding {
     
     .st-image-boxes .st-image-box {
         width: 100%;
+    }
+}
+
+/* 20.1 MIN WIDTH 1025px           */
+@media all and (min-width: 1025px) {
+
+    /* 10.1  CHAMBERS                    */
+    .data-section {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .column-1 {
+        padding-right: 160px;
     }
 }

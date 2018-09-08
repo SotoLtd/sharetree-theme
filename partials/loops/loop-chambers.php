@@ -9,9 +9,11 @@ $count = 0;
 
 $result = new WP_Query( $query_args );
 
-if ( $result->have_posts() ) :
+if ( $result->have_posts() ) : ?>
 
-	while ( $result->have_posts() ) : $result->the_post(); 
+	<h2>Chambers for hire</h2>
+
+	<?php while ( $result->have_posts() ) : $result->the_post(); 
 	
 		include( locate_template( 'partials/loop-content/content-chambers-list.php' ) ); 
 		$count++;

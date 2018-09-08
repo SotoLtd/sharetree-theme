@@ -6,6 +6,7 @@
  * and open the template in the editor.
  */
 
+
 function st_custom_script(){
     wp_enqueue_script('prettyPhoto', get_stylesheet_directory_uri() . '/assets/prettyPhoto/js/jquery.prettyPhoto.js', array('jquery'), NULL, true);
     wp_enqueue_script('st-scripts', get_stylesheet_directory_uri() . '/js/st-scripts.js', array('jquery', 'prettyPhoto'), NULL, true);
@@ -75,3 +76,10 @@ function st_image_overlay_box($atts, $content = null) {
 
 add_shortcode('st_image_overlay_box_wrap', 'st_image_overlay_box_wrap');
 add_shortcode('st_image_overlay_box', 'st_image_overlay_box');
+
+/**
+ * Load custom post type function
+ */
+require 'inc/custom-post-types.php';
+
+

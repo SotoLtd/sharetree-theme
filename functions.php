@@ -11,9 +11,18 @@ function st_custom_script(){
     wp_enqueue_script('prettyPhoto', get_stylesheet_directory_uri() . '/assets/prettyPhoto/js/jquery.prettyPhoto.js', array('jquery'), NULL, true);
     wp_enqueue_script('st-scripts', get_stylesheet_directory_uri() . '/js/st-scripts.js', array('jquery', 'prettyPhoto'), NULL, true);
 	wp_deregister_script('gMapAPI');
-	wp_register_script('gMapAPI', 'https://maps.google.com/maps/api/js?key=AIzaSyDZTYVTd7_ykuVxQiVN-84SxswWXl0s868', array('jquery'), '1.0.0', true);
+    wp_register_script('gMapAPI', 'https://maps.google.com/maps/api/js?key=AIzaSyDZTYVTd7_ykuVxQiVN-84SxswWXl0s868', array('jquery'), '1.0.0', true);
+    
+    //this is the chambers rental page, using ID in case slug or page title is changed
+    if ( is_page( 6046 ) ) :
+
+        wp_enqueue_script('chamber-accordion', get_stylesheet_directory_uri() . '/js/chambers.js', array('jquery'), NULL, true);
+        wp_enqueue_style( 'dashicons' );
+
+    endif;
 }
 add_action('wp_enqueue_scripts', 'st_custom_script', 20);
+
 function st_print_style(){
 	wp_enqueue_style('prettyPhoto', get_stylesheet_directory_uri() . '/assets/prettyPhoto/css/prettyPhoto.css', array(), null);
     wp_enqueue_style('st-print', get_stylesheet_directory_uri() . '/css/st-print.css', array(), null, 'print');
@@ -36,6 +45,7 @@ function st_image_overlay_box_wrap($atts, $content = null) {
         '<div class="st-image-boxes-inner clearfix">' . do_shortcode($content) . '</div>' . 
     '</div>';
 }
+
 function st_image_overlay_box($atts, $content = null) {
     extract(shortcode_atts(array( 
 		'title' => '',

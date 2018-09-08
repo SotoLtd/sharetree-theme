@@ -36,10 +36,10 @@ if (have_posts()) : the_post();
 	if (has_post_thumbnail() && $cmsms_heading != 'parallax') {
         echo '<div class="stpt-featured-image">'. get_the_post_thumbnail(get_the_ID(), 'full') .'</div>';
 	}
-	
-	the_content();	
 
-	get_template_part ( 'partials/loop-chambers' );
+	get_template_part ( 'partials/loops/loop-chambers' );
+
+	the_content();	
 
 endif;
 

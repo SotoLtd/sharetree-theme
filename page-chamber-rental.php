@@ -37,11 +37,13 @@ if (have_posts()) : the_post();
         echo '<div class="stpt-featured-image">'. get_the_post_thumbnail(get_the_ID(), 'full') .'</div>';
 	}
 
-	get_template_part ( 'partials/loops/loop-chambers' );
+	get_template_part ( 'partials/loops/loop-chambers' ); ?>
 
-	the_content();	
+	<div class="entry-content">
+		<?php the_content(); ?>
+	</div>	
 
-endif;
+<?php endif;
 
 echo '</div>' . "\n";
 	

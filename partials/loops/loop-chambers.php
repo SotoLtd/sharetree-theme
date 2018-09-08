@@ -5,13 +5,16 @@ $query_args = array(
 	'posts_per_page' => -1
 );
 
+$count = 0;
+
 $result = new WP_Query( $query_args );
 
 if ( $result->have_posts() ) :
 
 	while ( $result->have_posts() ) : $result->the_post(); 
 	
-		get_template_part ( 'partials/loop-content/content-chambers-list' );
+		include( locate_template( 'partials/loop-content/content-chambers-list.php' ) ); 
+		$count++;
 
 	endwhile;
 

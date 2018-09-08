@@ -2,8 +2,30 @@
 Theme Name: Share Tree Theme
 Template: industrial
 */
+
 @import url("../industrial/style.css");
 
+/* 1. GENERAL STYLES                      */
+
+/* 10. COMPONENTS                         */
+/* 10.1  CHAMBERS                         */
+
+/* 15. PAGE LAYOUTS / COMPONENT OVERRIDES */
+/* 15.1 CHAMBER RENTAL PAGE               */
+
+
+/* 20. MEDIA QUERIES                      */
+/* 20.1 MIN WIDTH 1025px                  */
+/* 20.2 MAX WIDTH 1024px                  */
+/* 20.3 BETWEEN 768px and 1023px          */
+/* 20.4 MAX WIDTH 767px                   */
+/* 20.5 MAX WIDTH 639px                   */
+/* 20.6 BETWEEN 451px and 520px           */
+/* 20.7 MAX WIDTH 450px                   */
+
+
+
+/* 1. GENERAL STYLES               */
 .clearfix:before,
 .clearfix:after,
 .st-innerrcols-wrap:after,
@@ -620,6 +642,79 @@ img {
     padding: 0 0 0 40px;
 }
 
+
+
+/* 10. COMPONENTS                    */
+
+/* 10.1  CHAMBERS                    */
+.hidden {
+    display: none;
+}
+p.less-padding {
+    padding-bottom: 0;
+}
+
+.two-columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.two-columns span:first-of-type {
+    width: 150px
+}
+.two-columns span:last-of-type {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+
+.chambers-list {
+    border: 2px solid rgba(178, 179, 170, .2);
+    border-bottom: 0;
+    padding: 10px 10px 0;
+}
+.chambers-list:last-of-type {
+    border-bottom: 2px solid rgba(178, 179, 170, .2);
+}
+
+.chambers-list h2 {
+    font-weight: bold;
+    color: #0e4194;
+    font-size: 20px;
+    line-height: 30px;
+    border: none;
+    margin-bottom: 0;
+}
+.chambers-list h2:before {
+    display: none;
+}
+
+.chambers-list button {
+    padding: 4px 8px;
+    margin-bottom: 10px;
+    background-color: #0e4194;
+    border: none;
+    color: white;
+    line-height: 20px;
+}
+.chambers-list button:hover {
+    background-color: rgba(178, 179, 170, .2);
+    color: #0e4194;
+}
+
+
+/* 15. PAGE LAYOUTS / COMPONENT OVERRIDES */
+
+/* 15.1 CHAMBER RENTAL PAGE               */
+.page-id-6046 .entry-content {
+    margin-top: 40px;
+}
+
+
+
+
+/* 20. MEDIA QUERIES               */
+
+/* 20.1 MIN WIDTH 1025px           */
 @media all and (min-width: 1025px) {
     .search_but {
         margin-top: 20px;
@@ -634,6 +729,8 @@ img {
     }
 }
 
+
+/* 20.2 MAX WIDTH 1024px           */
 @media only screen and (max-width: 1024px) {  
     .search_but.close_but {
         z-index: 10000;
@@ -776,6 +873,9 @@ img {
         z-index: 10000;
     }
 }
+
+
+/* 20.3 BETWEEN 768px and 1023px   */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .phone_number_but {
         text-align: center;
@@ -794,6 +894,8 @@ img {
         line-height: 22px;
     }
 }
+
+/* 20.4 MAX WIDTH 767px            */
 @media only screen and (max-width: 767px) {  
     .phone_number_but {
         text-align: right;
@@ -819,6 +921,9 @@ img {
         margin-bottom: 20px;
     }
 }
+
+
+/* 20.5 MAX WIDTH 639px            */
 @media only screen and (max-width: 639px){
     .st-form-wrap {
         display: block;
@@ -838,6 +943,9 @@ img {
         vertical-align: top;
     }
 }
+
+
+/* 20.6 BETWEEN 451px and 520px    */
 @media only screen and (min-width: 451px) and (max-width: 520px) {
     
     .st-image-boxes .st-image-box {
@@ -846,6 +954,7 @@ img {
 }
 
 
+/* 20.7 MAX WIDTH 450px            */
 @media only screen and (max-width: 450px) {  
     body .logo {
         padding-bottom: 20px;

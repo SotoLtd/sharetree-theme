@@ -667,13 +667,20 @@ p.less-padding {
     align-self: flex-end;
 }
 
-.chambers-list {
+.chambers-list-headings {
+    display: none;
+}
+
+.chambers-list, .chambers-card {
     border: 2px solid rgba(178, 179, 170, .2);
-    border-bottom: 0;
     padding: 10px 10px 0;
 }
-.chambers-list:last-of-type {
-    border-bottom: 2px solid rgba(178, 179, 170, .2);
+.chambers-list {
+    border-bottom: 0;  
+}
+.chambers-card {
+    border-top: 0;
+    border-bottom: 0;
 }
 
 .chambers-list h2 {
@@ -688,7 +695,8 @@ p.less-padding {
     display: none;
 }
 
-.chambers-list button {
+.chambers-list button,
+.chambers-card button {
     padding: 4px 8px;
     margin-bottom: 20px;
     background-color: #0e4194;
@@ -697,9 +705,31 @@ p.less-padding {
     line-height: 20px;
     font-size: 12px;
 }
-.chambers-list button:hover {
+.chambers-list button:hover,
+.chambers-card button:hover {
     background-color: rgba(178, 179, 170, .2);
     color: #0e4194;
+}
+
+.chambers-card > .two-columns {
+    display: block;
+}
+.chambers-card .prices-block {
+    border: 1px solid #0e4194;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 18px;
+}
+.chambers-card .prices-block p:last-of-type {
+    padding-bottom: 0;
+}
+.chambers-card .prices-block .two-columns {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+.chambers-card .prices-block button span {
+    width: auto;
 }
 
 
@@ -708,6 +738,10 @@ p.less-padding {
 /* 15.1 CHAMBER RENTAL PAGE               */
 .page-id-6046 .entry-content {
     margin-bottom: 40px;
+}
+
+.rental-chambers:last-child {
+    border-bottom: 2px solid rgba(178, 179, 170, .2);
 }
 
 
@@ -727,10 +761,6 @@ p.less-padding {
     }
     body #header .search_line {
         top: 93px;
-    }
-
-    .column-1 {
-        padding-right: 160px;
     }
 
     /* 10.1  CHAMBERS                    */
@@ -911,7 +941,22 @@ p.less-padding {
         display: flex;
     }
     .column-1 {
-        padding-right: 80px;
+        padding-right: 100px;
+    }
+
+    .chambers-card .two-columns {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .chambers-card span:first-of-type {
+        width: 100px;
+    }
+    .chambers-card .column-1 {
+        padding-right: 50px;
     }
 }
 
@@ -994,16 +1039,98 @@ p.less-padding {
     }
 }
 
-/* 20.1 MIN WIDTH 1025px           */
+/* 30.1 MIN WIDTH 1025px           */
 @media all and (min-width: 1025px) {
 
     /* 10.1  CHAMBERS                    */
-    .data-section {
+
+    /* 10.1.1 DIV LAYOUT                 */
+    .data-section, .chambers-list, 
+    .two-columns, .column-1, .column-2 {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
     }
-    .column-1 {
-        padding-right: 160px;
+    .data-section .column-1 {
+        padding-right: 0;
+    }
+
+    .chambers-list-headings .column-1,
+    .chambers-list-headings .column-2 {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+    .chambers-list-headings .title,
+    .chambers-list-headings .pdf,
+    .chambers-list-headings .volume,
+    .chambers-list-headings .column-1,
+    .chambers-list-headings .column-2,
+    .chambers-list-headings .more-info {
+        /* height: 50px; */
+    }
+
+    .chambers-list-table .two-columns span:first-child {
+        display: none;
+    }
+
+    .chambers-card .two-columns {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .chambers-card .column-1 {
+        display: block;
+    }
+
+    /* 10.1.2 COLUMN WIDTHS                 */
+    .chambers-list .title,
+    .chambers-list .pdf,
+    .chambers-list .volume,
+    .chambers-list .temperature,
+    .chambers-list .humidity,
+    .chambers-list .ramp-rate,
+    .chambers-list .more-info {
+        padding: 5px;
+    }
+    .chambers-list .title {
+        width: 250px;
+    }
+    .chambers-list .pdf {
+        width: 35px;
+    }
+    .chambers-list .volume,
+    .chambers-list .temperature,
+    .chambers-list .humidity,
+    .chambers-list .ramp-rate {
+        width: 110px;
+    }
+    .chambers-list button {
+        width: 120px;
+        height: 30px;
+        margin-bottom: 0;
+    }
+
+    /* 10.1.3 COLUMN STYLING              */
+    .chambers-list-headings p {
+        font-weight: bold;
+    }
+
+}
+
+/* 30.2 MIN WIDTH 1440px           */
+@media all and (min-width: 1440px) {
+    .chambers-list .volume,
+    .chambers-list .temperature,
+    .chambers-list .humidity,
+    .chambers-list .ramp-rate,
+    .chambers-list button {
+        width: 150px;
     }
 }

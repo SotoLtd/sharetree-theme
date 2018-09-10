@@ -2,50 +2,36 @@
 	$file = get_field('pdf');
 ?>	
 
-<section class="chambers-list">	
+<section class="chambers-list chambers-list-table">	
 
-	<h2><?php the_title(); ?></h2>
-
-	<p>
+	<h2 class="title"><?php the_title(); ?></h2>
+	<p class="pdf"> 
 		<?php if( $file ): ?>
-			<a href="<?php echo $file['url']; ?>"><?php the_field ('short_description') ?></a>
-		<?php else: ?>
-			<?php the_field ('short_description') ?>
+			<a href="<?php echo $file['url']; ?>"><img src="<?php echo get_stylesheet_directory_uri();?>/images/pdf-icon.png" alt="View PDF"></a>
 		<?php endif; ?>	
 	</p>
 
 	<div class="data-section">
 
 		<div class="column-1">
-			<p class="less-padding two-columns">
+			<p class="less-padding two-columns volume">
 				<span>Volume:</span>
 				<span><?php the_field ('volume_ltrs') ?> litres</span>
 			</p>
-			<p class="less-padding two-columns">
+			<p class="less-padding two-columns temperature">
 				<span>Temperature range:</span> 
 				<span><?php the_field ('temperature_range_low') ?>&#8451; - <?php the_field ('temperature_range_high') ?>&#8451;</span>
 			</p>
-			<p class="less-padding two-columns">
+		</div>
+
+		<div class="column-2">
+			<p class="less-padding two-columns humidity">
 				<span>Humidity range:</span> 
 				<span><?php the_field ('humidity_range_low') ?>&#8451; - <?php the_field ('humidity_range_high') ?>&#8451;</span>
 			</p>
-			<p class="two-columns">
+			<p class="two-columns ramp-rate">
 				<span>Ramp rate:</span> 
 				<span><?php the_field ('ramp_rate') ?>&#8451;/min</span>
-			</p>
-		</div>	
-		
-		<div class="column-2">	
-			<p class="less-padding two-columns">
-				<span>At your site:</span>  
-				<span>£<?php the_field ('price_at_your_site') ?> per month</span> 
-			</p>
-			<p class="two-columns">
-				<span>At our site:</span>  
-				<span>
-					£<?php the_field ('price_at_our_site_daily') ?> per day<br/>
-				 	£<?php the_field ('price_at_our_site_weekly') ?> per week
-				</span>
 			</p>
 		</div>	
 
@@ -55,9 +41,8 @@
 		Reveal details<span class="dashicons dashicons-arrow-right-alt2"></span>
 	</button>
 
-	<?php include( locate_template( 'partials/loop-content/content-chambers-card.php' ) ); ?>
-
 </section>
 
+<?php include( locate_template( 'partials/loop-content/content-chambers-card.php' ) ); ?>
 
 

@@ -31,7 +31,7 @@
                 e.target.innerHTML = HTMLReveal;
             }
 
-            e.target.nextElementSibling.classList.toggle ( 'hidden' );
+            e.target.parentElement.nextElementSibling.classList.toggle ( 'hidden' );
 
         }
 

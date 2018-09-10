@@ -29,7 +29,7 @@ if ($cmsms_layout == 'r_sidebar') {
 }
 
 
-echo '<div class="entry">' . "\n\t";
+echo '<div class="entry rental-chambers">' . "\n\t";
 
 if (have_posts()) : the_post();
 

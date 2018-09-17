@@ -28,7 +28,7 @@
 			</p>
 
 			<p>
-			<a href="/contact">
+			<a href="mailto:hello@gosoto.com?subject=Enquiry regarding <?php the_title(); ?>">
 				<button>Enquire now<span class="dashicons dashicons-admin-users"></span></button>
 			</a>
 </p>

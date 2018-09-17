@@ -3,7 +3,6 @@
 // check if the repeater field has rows of data
 if( have_rows('chambers') ): ?>
 
-	<h2>Chambers for hire</h2>
 	<?php get_template_part ( 'partials/loop-content/content-chambers-list-headings'); ?>
 
 	<?php // loop through the rows of data

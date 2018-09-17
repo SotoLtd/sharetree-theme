@@ -681,6 +681,7 @@ p.less-padding {
 .chambers-card {
     border-top: 0;
     border-bottom: 0;
+    padding-bottom: 40px;
 }
 
 .chambers-list h2 {
@@ -1064,14 +1065,6 @@ p.less-padding {
         -ms-flex-align: start;
         align-items: flex-start;
     }
-    .chambers-list-headings .title,
-    .chambers-list-headings .pdf,
-    .chambers-list-headings .volume,
-    .chambers-list-headings .column-1,
-    .chambers-list-headings .column-2,
-    .chambers-list-headings .more-info {
-        /* height: 50px; */
-    }
 
     .chambers-list-table .two-columns span:first-child {
         display: none;
@@ -1114,7 +1107,7 @@ p.less-padding {
     .chambers-list button {
         width: 120px;
         height: 30px;
-        margin-bottom: 0;
+        margin-bottom: 10px;
     }
 
     /* 10.1.3 COLUMN STYLING              */

@@ -678,9 +678,12 @@ p.less-padding {
 .chambers-list {
     border-bottom: 0;  
 }
+.chambers-list-hide-top-border {
+    border-top: 0;
+}
 .chambers-card {
     border-top: 0;
-    border-bottom: 0;
+    border-bottom: 1px solid #0e4194;
     padding-bottom: 40px;
 }
 
@@ -739,6 +742,10 @@ p.less-padding {
 /* 15.1 CHAMBER RENTAL PAGE               */
 .page-id-6046 .entry-content {
     margin-bottom: 40px;
+}
+
+.chambers-card:last-of-type {
+    border-bottom: 0;
 }
 
 .rental-chambers:last-child {

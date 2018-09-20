@@ -32,7 +32,11 @@
             }
 
             e.target.parentElement.nextElementSibling.classList.toggle ( 'hidden' );
-
+ 
+            if ( e.target.parentElement.nextElementSibling.nextElementSibling ) {
+                e.target.parentElement.nextElementSibling.nextElementSibling.classList.toggle ( 'chambers-list-hide-top-border' );
+            }
+            
         }
 
     });

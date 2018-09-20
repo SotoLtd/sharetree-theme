@@ -1,4 +1,5 @@
 <?php
+$count = 0;
 
 // check if the repeater field has rows of data
 if( have_rows('chambers') ): ?>

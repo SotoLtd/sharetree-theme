@@ -20,23 +20,32 @@
         function toggleCardView ( e ) {
 
             e.preventDefault();
-
-            console.log ( e.target );
-            console.log ( stateHidden );
-            console.log ( e.target.innerText );
-
-            if ( e.target.innerText == stateHidden ) {
-                e.target.innerHTML = HTMLHide;
+    
+            // Safari gets upset if you click the span and breaks everything
+            // So we're just checking to see exactly which element was clicked
+            if ( e.target.nodeName == 'SPAN') {
+                objectClicked = this;
             } else {
-                e.target.innerHTML = HTMLReveal;
+                objectClicked = e.target;
             }
 
-            e.target.parentElement.nextElementSibling.classList.toggle ( 'hidden' );
- 
-            if ( e.target.parentElement.nextElementSibling.nextElementSibling ) {
-                e.target.parentElement.nextElementSibling.nextElementSibling.classList.toggle ( 'chambers-list-hide-top-border' );
+
+            // now hide and reveal the chamber card as required
+            if ( objectClicked.innerText == stateHidden ) {
+                objectClicked.innerHTML = HTMLHide;
+            } else {
+                objectClicked.innerHTML = HTMLReveal;
             }
-            
+
+            objectClicked.parentElement.nextElementSibling.classList.toggle ( 'hidden' );
+    
+
+            // check to see if this is the last chamber in the list, as we don't want a bottom blue border on the last chamber
+            // if it isn't the last element, then add a blue border
+            if ( objectClicked.parentElement.nextElementSibling.nextElementSibling ) {
+                objectClicked.parentElement.nextElementSibling.nextElementSibling.classList.toggle ( 'chambers-list-hide-top-border' );
+            }
+ 
         }
 
     });

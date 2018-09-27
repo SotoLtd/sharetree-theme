@@ -1,6 +1,6 @@
 <section class="chambers-list chambers-list-headings">	
 
-	<p class="title">Title</p>
+	<p class="title">Rental chamber</p>
 	<p class="pdf">View PDF</p>
 
 	<div class="data-section">

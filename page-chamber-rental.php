@@ -43,16 +43,7 @@ if (have_posts()) : the_post();
 
 	<?php get_template_part ( 'partials/loops/loop-chambers' ); ?>
 
-	<div class="entry-content" style="padding-top: 40px;">
-		<p>Pricing Notes</p>
-
-		<ul>
-			<li>Prices exclude delivery and collection</li>
-			<li>A deposit is required for chambers rented at your site</li>
-			<li>A small additional setup charge will be made for chambers rented at Sharetree</li> 
-			<li>Prices are subject to review</li>
-		</ul>
-	</div>
+	<?php cmsms_content_composer(get_the_ID()); ?>
 
 <?php endif;
 

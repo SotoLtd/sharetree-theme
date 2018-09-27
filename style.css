@@ -748,11 +748,16 @@ p.less-padding {
     margin-bottom: 40px;
 }
 
+.page-id-6046 .entry-content ul li {
+    list-style-type: circle;
+    margin-left: 15px;
+}
+
 .chambers-card:last-of-type {
     border-bottom: 0;
 }
 
-.rental-chambers:last-child {
+.rental-chambers {
     border-bottom: 2px solid rgba(178, 179, 170, .2);
 }
 

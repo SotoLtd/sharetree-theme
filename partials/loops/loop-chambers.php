@@ -1,6 +1,9 @@
 <?php
-$count = 0;
+$count = 0; ?>
 
+<div class="rental-chambers">
+
+<?php
 // check if the repeater field has rows of data
 if( have_rows('chambers') ): ?>
 
@@ -26,5 +29,7 @@ if( have_rows('chambers') ): ?>
 
     endwhile;
 
-endif; 
+endif; ?>
+
+</div>
 

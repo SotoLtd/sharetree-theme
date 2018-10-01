@@ -28,7 +28,7 @@
 			</p>
 
 			<p>
-			<a href="mailto:sales@sharetree.co.uk?subject=Enquiry regarding <?php the_title(); ?>">
+			<a href="mailto:sales@sharetree.co.uk?subject=Enquiry regarding <?php the_field( 'short_description' ); ?>">
 				<button>Enquire now<span class="dashicons dashicons-admin-users"></span></button>
 			</a>
 </p>

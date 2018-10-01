@@ -7,7 +7,7 @@
 	<h2 class="title"><?php the_title(); ?></h2>
 	<p class="pdf"> 
 		<?php if( $file ): ?>
-			<a href="<?php echo $file['url']; ?>"><img src="<?php echo get_stylesheet_directory_uri();?>/images/pdf-icon.png" alt="View PDF"></a>
+			<a href="<?php echo $file['url']; ?>" target="_blank"><img src="<?php echo get_stylesheet_directory_uri();?>/images/pdf-icon.png" alt="View PDF"></a>
 		<?php endif; ?>	
 	</p>
 

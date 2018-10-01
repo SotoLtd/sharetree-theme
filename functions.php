@@ -93,3 +93,16 @@ add_shortcode('st_image_overlay_box', 'st_image_overlay_box');
 require 'inc/custom-post-types.php';
 
 
+// works in conjunction with the user role plugins
+// this is where the role rental-manager is created
+function remove_menus_for_rental_manager(){
+
+    if ( current_user_can( 'rental-manager' ) ) {
+         remove_menu_page( 'tools.php' );
+         remove_menu_page( 'edit-comments.php' );
+         remove_menu_page( 'edit.php' );
+         remove_menu_page( 'wpcf7' );
+    }
+
+}
+add_action( 'admin_menu', 'remove_menus_for_rental_manager' );

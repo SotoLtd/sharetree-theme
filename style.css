@@ -1103,6 +1103,7 @@ p.less-padding {
     }
     .chambers-card .column-1 {
         display: block;
+        max-width: 450px;
     }
 
     /* 10.1.2 COLUMN WIDTHS                 */

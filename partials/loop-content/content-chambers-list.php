@@ -27,7 +27,13 @@
 		<div class="column-2">
 			<p class="less-padding two-columns humidity">
 				<span>Humidity range:</span> 
-				<span><?php the_field ('humidity_range_low') ?>%RH - <?php the_field ('humidity_range_high') ?>%RH</span>
+
+				<?php if ( get_field ('humidity_range_low') == 'N/A' ) : ?>
+					<span>N/A</span>
+				<?php else: ?>
+					<span><?php the_field ('humidity_range_low') ?>%RH - <?php the_field ('humidity_range_high') ?>%RH</span>
+				<?php endif; ?>
+				
 			</p>
 			<p class="two-columns ramp-rate">
 				<span>Ramp rate:</span> 
